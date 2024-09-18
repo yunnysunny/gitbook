@@ -4,7 +4,7 @@
 var {Command, Option} = require('commander');
 // var bookRoot = parsedArgv._[1] || process.cwd();
 const program = new Command();
-
+program.version(require('../package.json').version);
 
 process.on('unhandledRejection', function(err) {
     console.error(err.stack);
