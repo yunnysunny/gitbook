@@ -27,6 +27,7 @@ jobs:
           run_install: false
       - name: Install Dependencies
         run: |
+            pnpm install svgexport -g
             pnpm install
       - name: Test On Node ${{ matrix.node-version }}
         run: |
