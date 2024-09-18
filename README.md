@@ -1,18 +1,22 @@
-> ## ⚠️ Deprecation warning:
-> As the efforts of the GitBook team are focused on the [GitBook.com](https://www.gitbook.com) platform, the CLI is no longer under active development.  
-> All content supported by the CLI are mostly supported by our [GitBook.com / GitHub integration](https://docs.gitbook.com/getting-started/git-sync).  
-> Content hosted on the [legacy.gitbook.com](https://legacy.gitbook.com) will continue working until further notice. For differences with the new version, > check out our [documentation](https://docs.gitbook.com/v2-changes/important-differences).
-> 
-> Join our [GitHub community](https://github.com/GitbookIO/community) to stay up to date with the latest news at GitBook.
-
-
 GitBook
 =======
 
-[![NPM version](https://badge.fury.io/js/gitbook.svg)](http://badge.fury.io/js/gitbook)
-[![Linux Build Status](https://travis-ci.org/GitbookIO/gitbook.png?branch=master)](https://travis-ci.org/GitbookIO/gitbook)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/63nlflxcwmb2pue6?svg=true)](https://ci.appveyor.com/project/GitBook/gitbook)
-[![Slack Status](https://slack.gitbook.com/badge.svg)](https://slack.gitbook.com)
+[![npm version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![David deps][david-image]][david-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+[![node version][node-image]][node-url]
+
+[npm-image]: https://img.shields.io/npm/v/@whyun/gitbook.svg?style=flat
+[npm-url]: https://npmjs.org/package/@whyun/gitbook
+[travis-image]: https://img.shields.io/travis/yunnysunny/gitbook.svg?style=flat-square
+[travis-url]: https://travis-ci.org/yunnysunny/gitbook
+[david-image]: https://img.shields.io/david/yunnysunny/@whyun/gitbook.svg?style=flat-square
+[david-url]: https://david-dm.org/yunnysunny/@whyun/gitbook
+[node-image]: https://img.shields.io/badge/node.js-%3E=_16-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+[coveralls-image]: https://img.shields.io/coveralls/yunnysunny/gitbook.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/yunnysunny/gitbook?branch=master
 
 GitBook is a command line tool (and Node.js library) for building beautiful books using GitHub/Git and Markdown (or AsciiDoc). Here is an example: [Learn Javascript](https://legacy.gitbook.com/book/GitBookIO/javascript).
 

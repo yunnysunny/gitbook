@@ -1,8 +1,39 @@
 #! /usr/bin/env node
 /* eslint-disable no-console */
 
-var color = require('bash-color');
+var {Command, Option} = require('commander');
+// var bookRoot = parsedArgv._[1] || process.cwd();
+const program = new Command();
 
-console.log(color.red('You need to install "gitbook-cli" to have access to the gitbook command anywhere on your system.'));
-console.log(color.red('If you\'ve installed this package globally, you need to uninstall it.'));
-console.log(color.red('>> Run "npm uninstall -g gitbook" then "npm install -g gitbook-cli"'));
+
+process.on('unhandledRejection', function(err) {
+    console.error(err.stack);
+    process.exit(1);
+});
+process.on('uncaughtException', function(err) {
+    console.error(err.stack);
+    process.exit(2);
+});
+const commands = require('../lib/cli');
+for (const cmd of commands) {
+    const command = program.command(cmd.name)
+        .description(cmd.description);
+    for (const option of cmd.options) {
+        const cmdOption = new Option(option.name, option.description);
+        if (option.values) {
+            cmdOption.choices(option.values);
+        }
+        if (option.defaults) {
+            cmdOption.default(option.defaults);
+        }
+        command.addOption(cmdOption);
+    }
+    command.action(function(...args) {
+        const kwargs = command.opts();
+
+        cmd.exec(args, kwargs);
+    });
+}
+
+
+program.parse();

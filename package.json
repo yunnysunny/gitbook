@@ -1,7 +1,7 @@
 {
-  "name": "gitbook",
+  "name": "@whyun/gitbook",
   "version": "3.2.3",
-  "homepage": "https://legacy.gitbook.com",
+  "homepage": "https://gitbook.whyun.com",
   "description": "Library and cmd utility to generate GitBooks",
   "main": "lib/index.js",
   "browser": "./lib/browser.js",
@@ -9,6 +9,7 @@
     "bash-color": "0.0.4",
     "cheerio": "0.20.0",
     "chokidar": "1.5.0",
+    "commander": "^12.1.0",
     "cp": "0.2.0",
     "cpr": "1.1.1",
     "crc": "3.4.0",
@@ -62,30 +63,35 @@
     "urijs": "1.18.0"
   },
   "devDependencies": {
+    "coveralls": "^3.1.1",
     "eslint": "2.10.2",
     "expect": "^1.20.1",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "nyc": "^17.0.0"
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "./node_modules/.bin/mocha ./testing/setup.js \"./lib/**/*/__tests__/*.js\" --bail --reporter=list --timeout=10000"
+    "test": "nyc ./node_modules/.bin/mocha ./testing/setup.js \"./lib/**/*/__tests__/*.js\" --bail --reporter=list --timeout=10000",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "local": "node ./bin/gitbook.js build ./docs ./_book",
+    "help": "node ./bin/gitbook.js help"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GitbookIO/gitbook.git"
+    "url": "https://github.com/yunnysunny/gitbook.git"
   },
   "bin": {
-    "gitbook": "./bin/gitbook.js"
+    "gitbook": "./lib/cli/index.js"
   },
   "keywords": [
     "git",
     "book",
     "gitbook"
   ],
-  "author": "FriendCode Inc. <contact@gitbook.com>",
+  "author": "yunnysunny <yunnysunny@whyun.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/GitbookIO/gitbook/issues"
+    "url": "https://github.com/yunnysunny/gitbook/issues"
   },
   "contributors": [
     {
@@ -95,6 +101,10 @@
     {
       "name": "Samy Pessé",
       "email": "samy@gitbook.com"
+    },
+    {
+      "name": "yunnysunny",
+      "email": "yunnysunny@gmail.com"
     }
   ]
 }
