@@ -2,15 +2,15 @@ GitBook
 =======
 
 [![npm version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
+[![build status][github-action-image]][github-action-url]
 [![David deps][david-image]][david-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![node version][node-image]][node-url]
 
 [npm-image]: https://img.shields.io/npm/v/@whyun/gitbook.svg?style=flat
 [npm-url]: https://npmjs.org/package/@whyun/gitbook
-[travis-image]: https://img.shields.io/travis/yunnysunny/gitbook.svg?style=flat-square
-[travis-url]: https://travis-ci.org/yunnysunny/gitbook
+[github-action-image]: https://github.com/yunnysunny/gitbook/actions/workflows/ci.yml/badge.svg
+[github-action-url]: https://github.com/yunnysunny/gitbook/actions/workflows/ci.yml
 [david-image]: https://img.shields.io/david/yunnysunny/@whyun/gitbook.svg?style=flat-square
 [david-url]: https://david-dm.org/yunnysunny/@whyun/gitbook
 [node-image]: https://img.shields.io/badge/node.js-%3E=_16-green.svg?style=flat-square
