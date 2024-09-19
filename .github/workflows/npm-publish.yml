@@ -33,7 +33,7 @@ jobs:
         with:
             version: 9
             run_install: true
-      - run: npm test
+      - run: pnpm install svgexport -g && npm test
 
   publish-npm:
     needs: test
