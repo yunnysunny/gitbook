@@ -1,6 +1,6 @@
 {
   "name": "@whyun/gitbook",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "homepage": "https://gitbook.whyun.com",
   "description": "Library and cmd utility to generate GitBooks",
   "main": "lib/index.js",
@@ -82,7 +82,7 @@
     "url": "https://github.com/yunnysunny/gitbook.git"
   },
   "bin": {
-    "gitbook": "./bin/github.js"
+    "gitbook": "./bin/gitbook.js"
   },
   "keywords": [
     "git",
