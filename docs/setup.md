@@ -2,12 +2,6 @@
 
 Getting GitBook installed and ready-to-go should only take a few minutes.
 
-### legacy.gitbook.com
-
-[legacy.gitbook.com](https://legacy.gitbook.com) is an easy to use solution to write, publish and host books. It is the easiest solution for publishing your content and collaborating on it.
-
-It integrates well with the [GitBook Editor](https://legacy.gitbook.com/editor).
-
 ### Local Installation
 
 ##### Requirements
@@ -22,7 +16,7 @@ Installing GitBook is easy and straightforward. Your system just needs to meet t
 The best way to install GitBook is via **NPM**. At the terminal prompt, simply run the following command to install GitBook:
 
 ```
-$ npm install gitbook-cli -g
+$ npm install @whyun/gitbook -g
 ```
 
 `gitbook-cli` is an utility to install and use multiple versions of GitBook on the same system. It will automatically install the required version of GitBook to build a book.
@@ -48,17 +42,6 @@ Or build the static website using:
 ```
 $ gitbook build
 ```
-
-##### Install pre-releases
-
-`gitbook-cli` makes it easy to download and install other versions of GitBook to test with your book:
-
-```
-$ gitbook fetch beta
-```
-
-Use `gitbook ls-remote` to list remote versions available for install.
-
 ##### Debugging
 
 You can use the options `--log=debug` and `--debug` to get better error messages (with stack trace). For example:

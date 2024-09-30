@@ -10,10 +10,3 @@ If the current behavior is a bug, please provide the steps to reproduce. if poss
 
 How do you think, or how would you like it should behave.
 
-#### For legacy.gitbook.com
-
-Provide, if possible, your username and the URL of the concerned book.
-
-----
-
-The GitBook Team

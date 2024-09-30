@@ -1,6 +1,6 @@
 {
   "name": "@whyun/gitbook",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "homepage": "https://gitbook.whyun.com",
   "description": "Library and cmd utility to generate GitBooks",
   "main": "lib/index.js",
@@ -30,6 +30,7 @@
     "gitbook-plugin-lunr": "1.2.0",
     "gitbook-plugin-search": "2.2.1",
     "gitbook-plugin-sharing": "1.0.2",
+    "gitbook-plugin-sitemap": "^1.2.0",
     "gitbook-plugin-theme-default": "1.0.7",
     "github-slugid": "1.0.1",
     "graceful-fs": "4.1.4",
@@ -81,7 +82,7 @@
     "url": "https://github.com/yunnysunny/gitbook.git"
   },
   "bin": {
-    "gitbook": "./lib/cli/index.js"
+    "gitbook": "./bin/github.js"
   },
   "keywords": [
     "git",

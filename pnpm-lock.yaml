@@ -80,6 +80,9 @@ importers:
       gitbook-plugin-sharing:
         specifier: 1.0.2
         version: 1.0.2
+      gitbook-plugin-sitemap:
+        specifier: ^1.2.0
+        version: 1.2.0
       gitbook-plugin-theme-default:
         specifier: 1.0.7
         version: 1.0.7
@@ -1202,7 +1205,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -1278,6 +1281,10 @@ packages:
   gitbook-plugin-sharing@1.0.2:
     resolution: {integrity: sha512-PdBmQdZWSgUYwpdqU/DpnfCcwHn8uhFT4aU0Tu+vipJxUDPW21KdXq+TOR36qlw/rz5NSVTYEzUnamW9G+q7aQ==}
     engines: {gitbook: '>=2.4.0'}
+
+  gitbook-plugin-sitemap@1.2.0:
+    resolution: {integrity: sha512-PSJ2BuuNot5CczwzjSCIyRRtom87nPXuD4pEtuVUEg10D8ZBpT3r9+/el6XRzwf8gyC4Sf3QKqreD/ia/G5V4g==}
+    engines: {gitbook: '>=3.0.0-pre.0'}
 
   gitbook-plugin-theme-default@1.0.7:
     resolution: {integrity: sha512-vY+8Prz58H6iu6c7KHyOISxapKnwU8P1TWNqOzESFAB40ny9D/R7GpNL2IluicrsDvtI6VfpQeCYQbBniamulw==}
@@ -2621,6 +2628,9 @@ packages:
   signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
 
+  sitemap@1.5.0:
+    resolution: {integrity: sha512-AGevBYvwFaoBsZoWClv8qlaA3lpoPCUnNh2zxIHl3coZXXD5U2+GKtkMBS3pXvl5NXvzN4R0392gN4YrIpSUmQ==}
+
   sleuth@0.1.1:
     resolution: {integrity: sha512-x9msqhyOx9CoQnBH6cKz6CIi4brtwke+obbrFdA1Y7FVLhY/vn3By0Al1ydGLZM0hczWNp2Ahx/4G+3zebVIxQ==}
 
@@ -2917,6 +2927,9 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
+  underscore@1.13.7:
+    resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
+
   union-value@1.0.1:
     resolution: {integrity: sha512-tJfXmxMeWYnczCVs7XAEvIV7ieppALdyepWMkHkwciRpZraG/xwT+s2JN8+pr1+8jCRf80FFzvr+MpQeeoF4Xg==}
     engines: {node: '>=0.10.0'}
@@ -2944,6 +2957,9 @@ packages:
   urix@0.1.0:
     resolution: {integrity: sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg==}
     deprecated: Please see https://github.com/lydell/urix#deprecated
+
+  url-join@0.0.1:
+    resolution: {integrity: sha512-H6dnQ/yPAAVzMQRvEvyz01hhfQL5qRWSEt7BX8t9DqnPw9BjMb64fjIRq76Uvf1hkHp+mTZvEVJ5guXOT0Xqaw==}
 
   use@3.1.1:
     resolution: {integrity: sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==}
@@ -4418,6 +4434,10 @@ snapshots:
     dependencies:
       lodash: 3.10.1
 
+  gitbook-plugin-sitemap@1.2.0:
+    dependencies:
+      sitemap: 1.5.0
+
   gitbook-plugin-theme-default@1.0.7: {}
 
   github-slugid@1.0.1: {}
@@ -5790,6 +5810,11 @@ snapshots:
 
   signal-exit@3.0.7: {}
 
+  sitemap@1.5.0:
+    dependencies:
+      underscore: 1.13.7
+      url-join: 0.0.1
+
   sleuth@0.1.1:
     dependencies:
       is-require: 0.0.1
@@ -6135,6 +6160,8 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
+  underscore@1.13.7: {}
+
   union-value@1.0.1:
     dependencies:
       arr-union: 3.1.0
@@ -6162,6 +6189,8 @@ snapshots:
   urijs@1.18.0: {}
 
   urix@0.1.0: {}
+
+  url-join@0.0.1: {}
 
   use@3.1.1: {}
 
